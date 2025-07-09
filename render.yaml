@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: exam-evaluator
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python single_file_exam_app.py"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10

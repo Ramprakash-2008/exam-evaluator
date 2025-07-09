@@ -1,0 +1,9 @@
+flask
+flask-login
+sentence-transformers
+language-tool-python
+fpdf
+pdfminer.six
+pytesseract
+pdf2image
+pillow
