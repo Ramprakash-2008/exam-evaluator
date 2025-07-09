@@ -41,7 +41,7 @@ def init_db():
                     role TEXT NOT NULL)''')
     con.commit()
     con.close()
-
+init_db()
 def get_user_by_username(username):
     con = sqlite3.connect(DATABASE)
     cur = con.cursor()
@@ -189,6 +189,5 @@ TEACHER_DASHBOARD_HTML = '''<!doctype html><title>Teacher Dashboard</title><h2>U
 STUDENT_DASHBOARD_HTML = '''<!doctype html><title>Student Dashboard</title><h2>Welcome {{name}}</h2><p>Ask your teacher to share evaluated PDF with you.</p><a href="/logout">Logout</a>'''
 
 if __name__ == '__main__':
-    init_db()
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
